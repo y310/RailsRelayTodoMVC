@@ -20,7 +20,7 @@ Schema = GraphQL::Schema.define do
     end
   }
 
-  resolve_type ->(obj, ctx) {
+  resolve_type ->(abstract_type, obj, ctx) {
     "Types::#{obj.class}Type".constantize
   }
 end
