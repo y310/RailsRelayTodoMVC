@@ -3,7 +3,7 @@ $stdout.sync = true
 
 APP_PATH = File.expand_path("../", __dir__)
 
-cmdline = ["yarn", "run", "relay", "--"] + ARGV
+cmdline = ["yarn", "run", "relay"] + ARGV
 
 Dir.chdir(APP_PATH) do
   system "bin/rake graphql:dump_schema"
